@@ -2,16 +2,12 @@ import { DataTypes } from "sequelize";
 
 import { sequelize } from "../config/sequelize.js";
 
-export const producto = await sequelize.define('productos',{
+const producto = await sequelize.define('productos',{
     id_producto:{
         type:DataTypes.STRING,
         primaryKey:true,
     },
     nombre:{
-        type:DataTypes.STRING,
-        allowNull:false,
-    },
-    descripcion:{
         type:DataTypes.STRING,
         allowNull:false,
     },
@@ -25,7 +21,9 @@ export const producto = await sequelize.define('productos',{
     },
     estado:{
         type:DataTypes.BOOLEAN,
-        allowNull:false,
+        defaultValue:true,
     },
     
 })
+
+export {producto}
