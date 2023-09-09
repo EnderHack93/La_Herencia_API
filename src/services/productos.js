@@ -22,6 +22,28 @@ export const servCreateProductos = async (productoReq)=>{
     return newProducto;
 }
 
+export const servUpdateProducto = async (id,productoObj)=>{
+    const prod = await producto.findByPk(id);
+    const {nombre , descripcion , precio} = productoObj;
+    prod.nombre = nombre;
+    prod.descripcion = descripcion;
+    prod.precio = precio;
+    await prod.save();
+    return prod;
+}
+
+export const servGetProducto = async (id)=>{
+    const response = await producto.findOne(id);
+    return response;
+}
+
+export const servDesactivarProducto = async (id)=>{
+    const prod = await producto.findByPk(id);
+    prod.estado = prod.estado ? false : true;
+    await prod.save();
+    return prod;
+}
+
 const genId = async(nombreProd)=>{
     var id_producto = nombreProd.slice(0,4);
     id_producto = id_producto + Math.floor(10000 + Math.random() * 90000);
