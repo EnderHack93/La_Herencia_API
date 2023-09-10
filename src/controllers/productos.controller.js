@@ -8,7 +8,7 @@ import {
 
 const getProductos = async (req, res) => {
   const data = await servVerProductos();
-  res.json([{"errores":"0"},{"productos":data}]);
+  res.json(data);
 };
 const createProductos = async (req, res) => {
   const { nombre, precio, descripcion } = req.body;
