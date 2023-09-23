@@ -16,4 +16,4 @@ router.put("/:id", updateProducto);
 router.delete("/:id", desactivarProducto);
 router.get("/:id", getProducto);
 
-export { router };
+export default router ;

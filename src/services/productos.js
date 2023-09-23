@@ -15,6 +15,7 @@ export const servCreateProductos = async (productoReq)=>{
         nombre: productoReq.nombre,
         descripcion:productoReq.descripcion,
         precio:productoReq.precio,
+        id_categoria:productoReq.id_categoria
     }).catch((error)=>{
         return error
     })
@@ -33,7 +34,7 @@ export const servUpdateProducto = async (id,productoObj)=>{
 }
 
 export const servGetProducto = async (id)=>{
-    const response = await producto.findOne(id);
+    const response = await producto.findByPk(id);
     return response;
 }
 

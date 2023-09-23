@@ -1,6 +1,7 @@
 import { DataTypes } from "sequelize";
 
 import { sequelize } from "../config/sequelize.js";
+import { categoria } from "./categoria.js";
 
 const producto = await sequelize.define('productos',{
     id_producto:{
@@ -25,5 +26,10 @@ const producto = await sequelize.define('productos',{
     },
     
 })
+producto.belongsTo(categoria,{
+    foreignKey:{
+        name:"id_categoria"
+    }
+});
 
 export {producto}

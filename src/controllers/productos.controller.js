@@ -11,8 +11,8 @@ const getProductos = async (req, res) => {
   res.json(data);
 };
 const createProductos = async (req, res) => {
-  const { nombre, precio, descripcion } = req.body;
-  if (nombre == null || precio == null || descripcion == null) {
+  const { nombre, precio, descripcion,id_categoria } = req.body;
+  if (nombre == null || precio == null || descripcion == null || id_categoria == null) {
     res.status(400).json({ error: "ingrese los datos requeridos" });
   } else {
     const response = await servCreateProductos(req.body);
@@ -20,7 +20,7 @@ const createProductos = async (req, res) => {
   }
 };
 const getProducto = async (req, res) => {
-    const id = req.body;
+    const id = req.params.id;
     const response = await servGetProducto(id);
     res.json(response);
 };
