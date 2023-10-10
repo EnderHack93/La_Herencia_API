@@ -6,10 +6,11 @@ import {
   getCategorias,
   updateCategoria,
 } from "../controllers/categorias.controller.js";
+import { verifyToken } from "../middleware/session.js";
 
 const router = Router();
 
-router.get("/", getCategorias);
+router.get("/",verifyToken, getCategorias);
 router.post("/", createCategoria);
 router.put("/:id", updateCategoria);
 router.delete("/:id", desactivarCategoria);

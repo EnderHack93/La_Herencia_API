@@ -20,6 +20,10 @@ const producto = await sequelize.define('productos',{
         type:DataTypes.DOUBLE,
         allowNull:false,
     },
+    imagen:{
+        type:DataTypes.STRING,
+        allowNull:false,
+    },
     estado:{
         type:DataTypes.BOOLEAN,
         defaultValue:true,

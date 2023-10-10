@@ -1,0 +1,13 @@
+{
+    "type": "service_account",
+    "project_id": "sanguine-office-331500",
+    "private_key_id": "62dac4b1407442e32505d8dcd83b31d82bea9e0b",
+    "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQCiIJiijc5i0Nnj\nySjTFnTaZnev0UmB7XDLtpo1AQa+9lMJ40oeD2XIP35oLaSUgOUugqulkxPQ5Uhx\n3RNH3f52dWhkIAWe4+UX3RWPWBpUSiGU1KKz6j5V7Tr+B/vbhBmavslU1LyA/bNZ\nSxLtl2zfN9VO4dGGK5gLN/M1uac/nbSICiZta9GrMvOGmqtyxp4qv8E4q8Qm+NWW\nZpjHltFIPyD2acOl/DnOj2Id8v/4y2nowse/D7TzEs6QrzABpotC63qtvwywUw/S\nor2glr8XdxNjfavNDi3iQaSoOn4VUdl0ZCTx2jncvgOslkP52dLSJqXPc1RAsdhh\nCBg71KxTAgMBAAECggEAUJiauEh9fnMrtkikgldKDN5ehmkovS3P4n1qqInTlC/4\n9NPoXwwxgXxK9zgldmujQt1TvhJhCfpJas1HjfUGUFYqaIfgs23AT/4ofyOBp0BY\n9FdGcOE0TtwJdQp8AlLntZ09ke3VrdwxAeVHyhP6W/cyE64/zg6y3XTZc25Q/da5\npzC9XxXvyoNhJxQhRST4jWm2/uCq6N4jSF2bajcf4AUlUDAMT37NJO9Z5vbanjbS\nxY2Kns74ZY3TkAJoP9f0dk3R6/FkITzTMnOLcCdVEvXqXBsE8kRUWAddcDKONAgB\n7Vg6cxNMY2SRtIgJF8ckD9MLr4HzD0DIy70OZyWCAQKBgQDb+D3nJivhVnNk0hmW\nNgASOHsJIxfeQBDnzqE9FXnfYtvumfv7++mXZuw+Dmwor6adTQrfOE6+bGj3VXEI\nfm4Z4ilYkFOMHMYFG97kIM7f/1DEnMHXrQqyBibXB45BNBgH7MoQ7J7hlarE0iGY\npZd4CGjZmehuoWTO5vDCInw+AQKBgQC8rulH6U/8NVb2VzUfrZo4Rkfn9eXrHYNA\nNymeyUT3p5QhwlAY9LNPv3BzvTwkHSYgl6VIwMM1bD17bF6PuC4GbLw075xqdrqw\nELfWB0XdLr+b5UMHH4s9j6TI5JM/RpSoY09SV2bbbdVol7jplE40j4PV1JrfAylo\n6ZbUkjCSUwKBgQCHL8Azj/UFztCqVKke9N8EU6vhyKyBjZQWMppLZSh6TlJmCEKh\n8Yb04m8sEEcOlizqnY+h8gQK6at03hDSrIjT5XeNk12VTZWxTBim0Tby2QF1Y/WJ\nrDJXiIpUOrOFhRODw1XIIvPeJdJGlfHJ03MMdPajTQBZBV1j/vBWD0WWAQKBgQCf\nFL28kpqMYxBx267/iWfIYIEJsknqRFS/1IJzzPAn+ZMsL19G2zE/YIHYI0lMjYLy\n4chKIbO0HBFuOT004S1030KDQy5WmMnn3gCRJEqkJGEKeG5d2BuWiMB/XDBFniWC\nH1DmdKhVAzJ1383YqeCR8hpOM9Vrh4fnW2J+0M7A3wKBgA4+1PN30HiodeeDC9XL\naHZLs48E566SE1b00eMwsxmFo1D+xP/XM0nuaKgLIpXYohhrFwKTGOfdgy57wpbK\nPvLTy08UqXJGwmDkLA1cUxVZOAgm6uu4yna58BIZ3Znz0Fi5aQRzUYbEUmmBQbDO\nLrDYaEU5Jx1lQA/EesWwSbY5\n-----END PRIVATE KEY-----\n",
+    "client_email": "cloudstorage-herencia@sanguine-office-331500.iam.gserviceaccount.com",
+    "client_id": "111039541632255045564",
+    "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+    "token_uri": "https://oauth2.googleapis.com/token",
+    "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+    "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/cloudstorage-herencia%40sanguine-office-331500.iam.gserviceaccount.com",
+    "universe_domain": "googleapis.com"
+  }
