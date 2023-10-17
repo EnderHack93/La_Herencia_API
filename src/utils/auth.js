@@ -1,6 +1,6 @@
 import { persona } from "../models/persona.js";
 import bcrypt from "bcrypt";
-import { genToken } from "../utils/jwt.js";
+import { genToken } from "./jwt.js";
 export const servAuthUser = async (correo, password) => {
   const user = await persona.findOne({
     where: { correo },

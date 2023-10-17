@@ -1,5 +1,5 @@
 import { Sequelize } from "sequelize";
-import {config} from "dotenv";
+import { config } from "dotenv";
 
 config();
 
@@ -11,4 +11,4 @@ const host = process.env.PGHOST;
 const port = process.env.PGPORT;
 
 const sequelize = new Sequelize(url);
-export{sequelize}
+export { sequelize };

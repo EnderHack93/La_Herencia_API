@@ -1,4 +1,4 @@
-import { servAuthUser } from "../services/auth.js";
+import { servAuthUser } from "../utils/auth.js";
 
 const login = async (req, res) => {
   const { email, password } = req.body;

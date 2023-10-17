@@ -70,6 +70,15 @@ export const servDesactivarProducto = async (id) => {
   return prod;
 };
 
+export const servObtenerProdPorCat = async (id) => {
+  const response = await producto.findAll({
+    where: {
+      id_categoria: id,
+    },
+  });
+  return response;
+}
+
 const genId = async (nombreProd) => {
   var id_producto = nombreProd.slice(0, 4);
   id_producto = id_producto + Math.floor(10000 + Math.random() * 90000);

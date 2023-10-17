@@ -5,6 +5,7 @@ import categorias from "./routes/categorias.routes.js";
 import personas from "./routes/personas.routes.js";
 import sessions from "./routes/session.routes.js";
 import pedidos from "./routes/pedidos.routes.js";
+import detallePedidos from "./routes/detallePedidos.routes.js"
 import cors from "cors";
 import bodyParser from "body-parser";
 import multer from "multer";
@@ -29,5 +30,6 @@ app.use("/categorias", categorias);
 app.use("/personas", personas);
 app.use("/session",sessions);
 app.use("/pedidos",pedidos);
+app.use("/detallepedidos",detallePedidos);
 
 export default app;

@@ -1,6 +1,5 @@
 import { DataTypes } from "sequelize";
 import { sequelize } from "../config/sequelize.js";
-import { persona } from "./persona.js";
 
 const pedido = await sequelize.define("pedidos", {
   id_pedido: {
@@ -25,6 +24,4 @@ const pedido = await sequelize.define("pedidos", {
   },
 });
 
-
-
-export {pedido}
+export { pedido };

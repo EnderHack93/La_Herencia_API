@@ -1,7 +1,8 @@
 import { Router } from "express";
+import { getAllPedidos } from "../controllers/pedidos.controller.js";
 
 const router = Router();
 
-router.get("/",)
+router.get("/",getAllPedidos)
 
 export default router

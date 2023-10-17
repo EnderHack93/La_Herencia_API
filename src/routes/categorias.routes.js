@@ -10,7 +10,7 @@ import { verifyToken } from "../middleware/session.js";
 
 const router = Router();
 
-router.get("/",verifyToken, getCategorias);
+router.get("/", getCategorias);
 router.post("/", createCategoria);
 router.put("/:id", updateCategoria);
 router.delete("/:id", desactivarCategoria);

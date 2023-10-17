@@ -1,4 +1,5 @@
 import {categoria} from '../models/categoria.js';
+import { servDesactivarProducto, servObtenerProdPorCat } from './productos.js';
 
 export const servVerCategorias = async ()=>{
     const response = await categoria.findAll({
@@ -34,6 +35,13 @@ export const servGetCategoria = async (id)=>{
 
 export const servDesactivarCategoria = async (id)=>{
     const cate = await categoria.findByPk(id);
+    const productos = await servObtenerProdPorCat(id);
+    if(productos.length > 0){
+
+        productos.forEach(async(producto) => {
+            await servDesactivarProducto(producto.id_producto);
+          });
+    }
     cate.estado = cate.estado ? false : true;
     await cate.save();
     return cate;
