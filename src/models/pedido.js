@@ -1,5 +1,6 @@
-import { DataTypes } from "sequelize";
+import { DataTypes, ENUM } from "sequelize";
 import { sequelize } from "../config/sequelize.js";
+import { persona } from "../models/persona.js";
 
 const pedido = await sequelize.define("pedidos", {
   id_pedido: {
@@ -19,7 +20,9 @@ const pedido = await sequelize.define("pedidos", {
     allowNull: false,
   },
   estado: {
-    type: DataTypes.STRING,
+    type: ENUM,
+    values: ["pendiente", "confirmado", "entregado", "cancelado"],
+    defaultValue: "pendiente",
     allowNull: false,
   },
 });

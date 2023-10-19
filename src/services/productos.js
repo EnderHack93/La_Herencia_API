@@ -1,5 +1,5 @@
 import { producto } from "../models/producto.js";
-import { replaceImage, uploadFile } from "./cloudStorage.js";
+import { replaceImage, uploadFile } from "../utils/cloudStorage.js";
 export const servVerProductos = async () => {
   const response = await producto.findAll({
     where: {
