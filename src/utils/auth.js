@@ -1,6 +1,8 @@
 import { persona } from "../models/persona.js";
 import bcrypt from "bcrypt";
 import { genToken } from "./jwt.js";
+import process from 'process';
+
 export const servAuthUser = async (correo, password) => {
   const user = await persona.findOne({
     where: { correo },
@@ -31,4 +33,13 @@ export const servAuthUserMovil = async (correo,password)=>{
   if (!match) return { mensaje: "contraseña incorrecta" };
 
   return true;
+}
+export const servGenLinkResetPass = async (correo)=>{
+  const user = await persona.findOne({
+    where: { correo },
+  });
+  if (!user) return { mensaje: "correo no registrado" };
+  
+  return process.env.HOST;
+
 }
