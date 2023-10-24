@@ -20,3 +20,15 @@ export const servAuthUser = async (correo, password) => {
 
   return { token };
 };
+
+export const servAuthUserMovil = async (correo,password)=>{
+  const user = await persona.findOne({
+    where: { correo },
+  });
+  if (!user) return { mensaje: "correo no registrado" };
+
+  const match = await bcrypt.compare(password, user.password);
+  if (!match) return { mensaje: "contraseña incorrecta" };
+
+  return true;
+}

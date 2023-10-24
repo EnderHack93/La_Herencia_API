@@ -1,8 +1,14 @@
-import { servAuthUser } from "../utils/auth.js";
+import { servAuthUser, servAuthUserMovil } from "../utils/auth.js";
 
-const login = async (req, res) => {
+export const login = async (req, res) => {
   const { email, password } = req.body;
   const response = await servAuthUser(email, password);
   res.json(response);
 };
-export { login };
+
+export const loginMovil = async (req, res) => {
+  const { email, password } = req.body;
+  const response = await servAuthUserMovil(email, password);
+  res.json(response);
+}
+
