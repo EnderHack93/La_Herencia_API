@@ -9,6 +9,12 @@ export const genToken = async (persona) => {
   });
   return generedToken;
 };
+export const genTokenResetPass =async (id,email) => {
+  var genToken = Jwt.sign({ id,email }, process.env.SECRETSTRING,{
+    expiresIn: "5m",
+  });
+  return genToken;
+}
 export function checkToken(token) {
   try {
     Jwt.verify(token, process.env.SECRETSTRING,);
