@@ -35,19 +35,7 @@ export const servAuthUserMovil = async (correo, password) => {
 
   return true;
 };
-export const servGenLinkResetPass = async (correo) => {
-  const user = await persona.findOne({
-    where: { correo },
-  });
-  if (!user) return "correo no registrado";
 
-  const token = await genTokenResetPass(user.id_persona, user.correo);
-
-  const url =
-    process.env.HOST + "session/reset-password/" + user.id_persona + "/" + token;
-
-  return url;
-};
 export const servSendResPassMail = async (correo, url) => {
   const sendEmail = await servSendUrlResetPass(correo, url);
   return sendEmail;
