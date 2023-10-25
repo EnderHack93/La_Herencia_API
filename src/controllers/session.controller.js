@@ -4,6 +4,7 @@ import {
   servGenLinkResetPass,
   servSendResPassMail,
 } from "../utils/auth.js";
+import { checkToken } from "../utils/jwt.js";
 
 export const login = async (req, res) => {
   const { email, password } = req.body;
@@ -21,6 +22,17 @@ export const genResetPassLink = async (req, res) => {
     res.json(sendEmail);
   }
 };
+
+export const verifyResetPass = async (req, res) => {
+  const token = req.params.token;
+
+  const verifyToken = checkToken(token);
+  if(verifyToken) {
+    res.json({mensaje:"token verificado"})
+  }else{
+    res.status(404).json({mensaje:"token invalido"})
+  }
+}
 
 export const loginMovil = async (req, res) => {
   const { email, password } = req.body;
