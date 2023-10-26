@@ -5,12 +5,14 @@ import {
   desactivarProducto,
   getProducto,
   getProductos,
+  getProductosCategoria,
   updateProducto,
 } from "../controllers/productos.controller.js";
 
 const router = Router();
 
 router.get("/", getProductos);
+router.get("/:idCat",getProductosCategoria);
 router.post("/", createProductos);
 router.put("/:id", updateProducto);
 router.delete("/:id", desactivarProducto);

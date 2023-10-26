@@ -6,6 +6,7 @@ import personas from "./src/routes/personas.routes.js";
 import sessions from "./src/routes/session.routes.js";
 import pedidos from "./src/routes/pedidos.routes.js";
 import detallePedidos from "./src/routes/detallePedidos.routes.js"
+import cupones from "./src/routes/cupones.routes.js"
 import cors from "cors";
 import bodyParser from "body-parser";
 import multer from "multer";
@@ -31,5 +32,6 @@ app.use("/personas", personas);
 app.use("/session",sessions);
 app.use("/pedidos",pedidos);
 app.use("/detallepedidos",detallePedidos);
+app.use("/cupones",cupones);
 
 export default app;

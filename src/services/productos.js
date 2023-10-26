@@ -8,6 +8,14 @@ export const servVerProductos = async () => {
   });
   return response;
 };
+export const servGetProductosCat = async (idCategoria) => {
+  const response = await producto.findAll({
+    where: {
+      id_categoria: idCategoria
+    },
+  });
+  return response;
+}
 
 export const servCreateProductos = async (productoReq, imagen) => {
   const id_producto = await genId(productoReq.nombre);

@@ -2,12 +2,18 @@ import {
   servCreateProductos,
   servDesactivarProducto,
   servGetProducto,
+  servGetProductosCat,
   servUpdateProducto,
   servVerProductos,
 } from "../services/productos.js";
 
 const getProductos = async (req, res) => {
   const data = await servVerProductos();
+  res.json(data);
+};
+const getProductosCategoria = async (req, res) => {
+  const idCategoria = req.params.idCat;
+  const data = await servGetProductosCat(idCategoria);
   res.json(data);
 };
 const createProductos = async (req, res) => {
@@ -17,12 +23,11 @@ const createProductos = async (req, res) => {
     nombre == null ||
     precio == null ||
     descripcion == null ||
-    id_categoria == null 
+    id_categoria == null
   ) {
-  
     res.status(400).json({ error: "ingrese los datos requeridos" });
   } else {
-    const response = await servCreateProductos(req.body,imagen);
+    const response = await servCreateProductos(req.body, imagen);
     res.json(response);
   }
 };
@@ -34,7 +39,7 @@ const getProducto = async (req, res) => {
 const updateProducto = async (req, res) => {
   const id = req.params.id;
   const newImage = req.files[0];
-  const response = await servUpdateProducto(id, req.body,newImage);
+  const response = await servUpdateProducto(id, req.body, newImage);
   res.json(response);
 };
 const desactivarProducto = async (req, res) => {
@@ -50,6 +55,7 @@ const deleteProducto = async (req, res) => {
 export {
   getProductos,
   createProductos,
+  getProductosCategoria,
   getProducto,
   updateProducto,
   deleteProducto,

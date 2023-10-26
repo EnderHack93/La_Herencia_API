@@ -1,6 +1,8 @@
 import {
   servAddDetallesPedido,
+  servApplyCupon,
   servCreatePedido,
+  servFilterPedidos,
   servGetAllPedidos,
   servGetPedidoId,
   servRefactorMontoTotal,
@@ -8,8 +10,15 @@ import {
 } from "../services/pedidos.js";
 
 export const getAllPedidos = async (req, res) => {
-  const data = await servGetAllPedidos();
-  res.json(data);
+  const {columna,tipo} = req.body;
+  if(columna == null || tipo == null){
+    const data = await servGetAllPedidos();
+    res.json(data);
+  }else{
+    const data = await servFilterPedidos(columna,tipo);
+    res.json(data);
+  }
+  
 };
 
 export const getPedidoId = async (req, res) => {
@@ -32,6 +41,7 @@ export const updateEstadoPedido = async (req, res) => {
 export const createPedido = async (req, res) => {
   const { id_cliente } = req.body;
   const { productos } = req.body;
+  const {cupon} = req.body;
   if (id_cliente != null) {
     if (productos != null) {
       const data = await servCreatePedido(id_cliente);
@@ -39,7 +49,13 @@ export const createPedido = async (req, res) => {
       await servAddDetallesPedido(data, productos);
 
       const newData = await servRefactorMontoTotal(data.id_pedido);
-      res.status(200).json(newData);
+      
+      if(cupon != null){
+        const applyCupon = await servApplyCupon(newData.id_pedido,cupon);
+        res.status(200).json(applyCupon);
+      }else{
+        res.status(200).json(newData);
+      }
     } else {
       res
         .status(400)

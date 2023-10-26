@@ -6,9 +6,9 @@ import { servSendUrlResetPass } from "./mail.js";
 
 export const servAuthUser = async (correo, password) => {
   const user = await persona.findOne({
-    where: { correo },
+    where: { correo, estado: true },
   });
-  if (!user) return { mensaje: "correo no registrado" };
+  if (!user) return { mensaje: "correo no registrado o usuario invalidado" };
 
   const match = await bcrypt.compare(password, user.password);
   if (!match) return { mensaje: "contraseña incorrecta" };
@@ -26,9 +26,9 @@ export const servAuthUser = async (correo, password) => {
 
 export const servAuthUserMovil = async (correo, password) => {
   const user = await persona.findOne({
-    where: { correo },
+    where: { correo, estado: true },
   });
-  if (!user) return { mensaje: "correo no registrado" };
+  if (!user) return { mensaje: "correo no registrado o usuario invalidado" };
 
   const match = await bcrypt.compare(password, user.password);
   if (!match) return { mensaje: "contraseña incorrecta" };
