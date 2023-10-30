@@ -1,0 +1,23 @@
+_id: req_73428c86d3184f6dbf22aa5d80f88699
+type: Request
+parentId: fld_248cdcc984ce427780af85a3c87d92a2
+modified: 1698239494490
+created: 1698239459856
+url: http://localhost:8000/session/reset-password/MR9393328/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ik1SOTM5MzMyOCIsImVtYWlsIjoibWF1cm9yYWRhOTNAZ21haWwuY29tIiwiaWF0IjoxNjk4MjM4NTg2LCJleHAiOjE2OTgyMzg4ODZ9.71f3QauOciyjruCQCMyLC544sJ9hj8Goc3PaG2HrrKY
+name: GET reset pass auth
+description: ""
+method: GET
+body: {}
+parameters: []
+headers:
+  - name: User-Agent
+    value: insomnia/2023.5.8
+authentication: {}
+metaSortKey: -1698239459856
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

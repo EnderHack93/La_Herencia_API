@@ -1,0 +1,48 @@
+_id: req_1297a20820544178abe597d3b5bc0b98
+type: Request
+parentId: fld_0df0d6a75d1c42aab8e050d564524665
+modified: 1698291706621
+created: 1694140352459
+url: localhost:8000/productos/BIFE78071
+name: Actualizar Producto
+description: ""
+method: PUT
+body:
+  mimeType: multipart/form-data
+  params:
+    - name: nombre
+      value: carne fea
+      id: pair_c4131f615fe84627bf1e23426615eb44
+    - id: pair_a4c8621139e949a2a33dc08cf78546d7
+      name: descripcion
+      value: carne que es fea2
+      description: ""
+    - id: pair_7abf4a42df944f5bbd01524a728c104a
+      name: precio
+      value: "11.4"
+      description: ""
+    - id: pair_f07cb095c078446a814fa7abde7d6a89
+      name: id_categoria
+      value: "2"
+      description: ""
+    - id: pair_b41c6a4d932245f983749b170dd69dcc
+      name: imagen
+      value: ""
+      description: ""
+      type: file
+      fileName: C:\Users\mauro\Downloads\descargar.jpeg
+parameters: []
+headers:
+  - name: Content-Type
+    value: multipart/form-data
+  - name: User-Agent
+    value: insomnia/2023.5.8
+authentication: {}
+metaSortKey: -1694322635818
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

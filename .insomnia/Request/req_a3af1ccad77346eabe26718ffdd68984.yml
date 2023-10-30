@@ -1,0 +1,31 @@
+_id: req_a3af1ccad77346eabe26718ffdd68984
+type: Request
+parentId: fld_248cdcc984ce427780af85a3c87d92a2
+modified: 1698345202653
+created: 1698241505790
+url: http://localhost:8000/session/reset-password/MR9345210/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Ik1SOTM0NTIxMCIsImVtYWlsIjoibWF1cm9yYWRhOTNAZ21haWwuY29tIiwiaWF0IjoxNjk4MzQ0OTA3LCJleHAiOjE2OTgzNDUyMDd9.CBVLWucg3rq2pjPGSAgQ3K2Wa4oP-bu3Iwbn_DIEknk
+name: RESET password
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"password":"Soyelmauro2",
+    	"repPassword":"Soyelmauro2"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+  - name: User-Agent
+    value: insomnia/2023.5.8
+authentication: {}
+metaSortKey: -1698241505790
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

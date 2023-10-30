@@ -1,0 +1,31 @@
+_id: req_29de0cc7f4144484b673628be7c49213
+type: Request
+parentId: fld_248cdcc984ce427780af85a3c87d92a2
+modified: 1698293279765
+created: 1696949436416
+url: localhost:8000/session/login
+name: LOGIN
+description: ""
+method: GET
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"email":"maurorada93@gmail.com",
+    	"password":"Soyelmauro2"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+  - name: User-Agent
+    value: insomnia/2023.5.8
+authentication: {}
+metaSortKey: -1696949436416
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

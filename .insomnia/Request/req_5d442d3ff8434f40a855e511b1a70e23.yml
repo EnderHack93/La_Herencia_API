@@ -1,0 +1,50 @@
+_id: req_5d442d3ff8434f40a855e511b1a70e23
+type: Request
+parentId: fld_a1b31ee34578492db3335c2c8b40698e
+modified: 1698338641446
+created: 1697547659007
+url: localhost:8000/pedidos
+name: CREATE Pedido
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"id_cliente":"MR9345210",
+    	"cupon":"J3J-1TB-7RA",
+    	"productos":
+    	[
+    		{
+    			"id_producto":"BIFE77340",
+    			"cantidad": 50
+    		},
+    		{
+    			"id_producto":"BIFE77340",
+    			"cantidad": 50
+    		},
+    		{
+    			"id_producto":"BIFE77340",
+    			"cantidad": 50
+    		},
+    		{
+    			"id_producto":"BIFE77340",
+    			"cantidad": 50
+    		}
+    	]
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+  - name: User-Agent
+    value: insomnia/2023.5.8
+authentication: {}
+metaSortKey: -1697547659007
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

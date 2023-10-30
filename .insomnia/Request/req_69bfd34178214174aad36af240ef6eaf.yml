@@ -1,0 +1,30 @@
+_id: req_69bfd34178214174aad36af240ef6eaf
+type: Request
+parentId: fld_a1b31ee34578492db3335c2c8b40698e
+modified: 1697732021038
+created: 1697730381889
+url: localhost:8000/pedidos/5156715f-efef-4cc3-ad74-f8d5f27d20ec
+name: UPDATE Estado Pedido
+description: ""
+method: PUT
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"estado":"pendiente"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+  - name: User-Agent
+    value: insomnia/2023.5.8
+authentication: {}
+metaSortKey: -1697730381889
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

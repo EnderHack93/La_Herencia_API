@@ -1,0 +1,35 @@
+_id: req_efeeafaffce54bac81ddba7f557cfa16
+type: Request
+parentId: fld_e44e84caa2c94512b518a74de9da6300
+modified: 1696961130907
+created: 1696943710745
+url: localhost:8000/personas
+name: CREATE Persona
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"nombres":"Mauro Ariel",
+    	"apellidos":"Rada Escobar",
+    	"ci":"9153443",
+    	"telefono":"78767646",
+    	"correo":"maurorada93@gmail.com",
+    	"password":"Soyelmauro1"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+  - name: User-Agent
+    value: insomnia/2023.5.8
+authentication: {}
+metaSortKey: -1696943710745
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

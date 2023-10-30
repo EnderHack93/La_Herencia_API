@@ -1,0 +1,30 @@
+_id: req_81f19ff4124f4d47beb277ae607e60e2
+type: Request
+parentId: fld_248cdcc984ce427780af85a3c87d92a2
+modified: 1698164314014
+created: 1698113012774
+url: localhost:8000/session/forgotPass
+name: GEN link recuperar contraseña
+description: ""
+method: GET
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"email":"maurorada93@gmail.com"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+  - name: User-Agent
+    value: insomnia/2023.5.8
+authentication: {}
+metaSortKey: -1698113012774
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

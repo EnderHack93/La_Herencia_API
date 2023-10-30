@@ -1,0 +1,35 @@
+_id: req_358466d0fd1045aea14a4f6805b5bbee
+type: Request
+parentId: fld_e44e84caa2c94512b518a74de9da6300
+modified: 1696946948766
+created: 1696946878186
+url: localhost:8000/personas/MR236291
+name: UPDATE Persona
+description: ""
+method: PUT
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"nombres":"Mauro Ariel",
+    	"apellidos":"Rada Escobar",
+    	"ci":"247433",
+    	"telefono":"78767646",
+    	"correo":"ola@gmail.com",
+    	"password":"12345asd"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+  - name: User-Agent
+    value: insomnia/2023.5.8
+authentication: {}
+metaSortKey: -1696946878186
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

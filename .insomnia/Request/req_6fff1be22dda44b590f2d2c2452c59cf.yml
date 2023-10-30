@@ -1,0 +1,52 @@
+_id: req_6fff1be22dda44b590f2d2c2452c59cf
+type: Request
+parentId: fld_0df0d6a75d1c42aab8e050d564524665
+modified: 1698344681166
+created: 1694093668941
+url: localhost:8000/productos
+name: CREATE Productos
+description: ""
+method: POST
+body:
+  mimeType: multipart/form-data
+  params:
+    - name: nombre
+      value: Cerveza Huari
+      id: pair_e4095e8d26b6408fb8bfac1403c7b336
+      type: text
+      multiline: false
+    - id: pair_41e92cf3afc046b1904ead420195fe02
+      name: descripcion
+      value: Cerbeza huari sabor chocolate
+      description: ""
+      type: text
+      multiline: false
+    - id: pair_259ba2b3207f4f5da2f1857599c6fb3a
+      name: precio
+      value: "9.3"
+      description: ""
+    - id: pair_c82747b9e3824149b97506d4546db504
+      name: id_categoria
+      value: "2"
+      description: ""
+    - id: pair_7d35633fa1de4ee1bc05acc35fbdbcce
+      name: imagen
+      value: ""
+      description: ""
+      type: file
+      fileName: C:\Users\mauro\Downloads\246121516_3064455437166050_4582035958577799178_n.jpg
+parameters: []
+headers:
+  - name: Content-Type
+    value: multipart/form-data
+  - name: User-Agent
+    value: Insomnia/2023.5.7
+authentication: {}
+metaSortKey: -1694322635968
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

@@ -1,0 +1,23 @@
+_id: req_ee4e6412df7a4fbba705dc22d6148793
+type: Request
+parentId: fld_659e0907fa87409e92a543283f63ea06
+modified: 1696961601769
+created: 1694322407578
+url: localhost:8000/categorias/1
+name: Desactivar/Activar Categoria
+description: ""
+method: DELETE
+body: {}
+parameters: []
+headers:
+  - name: User-Agent
+    value: insomnia/2023.5.8
+authentication: {}
+metaSortKey: -1694322609857
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

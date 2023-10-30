@@ -1,0 +1,31 @@
+_id: req_c184b57d64434dff8eb16e5e98946ba5
+type: Request
+parentId: fld_9da2284ff0bb470fb62e3afa7c2c2918
+modified: 1698333913881
+created: 1698333803818
+url: localhost:8000/cupones
+name: CREATE cupones
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"porcentajeDescuento": 15,
+    	"usosMaximos":50
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+  - name: User-Agent
+    value: insomnia/2023.5.8
+authentication: {}
+metaSortKey: -1698333803818
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

@@ -1,0 +1,10 @@
+_id: fld_4de75467cd5541119320e28d8d210c53
+type: RequestGroup
+parentId: wrk_76066c59c8164a2b9280913fb50f0f99
+modified: 1697518535187
+created: 1697518535187
+name: DetallePedidos
+description: ""
+environment: {}
+environmentPropertyOrder: null
+metaSortKey: -1697518535187
