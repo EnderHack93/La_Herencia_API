@@ -1,3 +1,7 @@
+import { persona } from "../models/persona.js";
+import { genTokenResetPass } from "../utils/jwt.js";
+import bcrypt from "bcrypt";
+
 export const servGenLinkResetPass = async (correo) => {
     const user = await persona.findOne({
       where: { correo },
