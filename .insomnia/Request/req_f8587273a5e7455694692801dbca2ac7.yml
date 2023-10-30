@@ -1,0 +1,23 @@
+_id: req_f8587273a5e7455694692801dbca2ac7
+type: Request
+parentId: fld_4de75467cd5541119320e28d8d210c53
+modified: 1697750213014
+created: 1697689143447
+url: localhost:8000/detallepedidos/b435d355-52bd-4de9-bb64-f1434f04a750
+name: GET Detalle Pedido
+description: ""
+method: GET
+body: {}
+parameters: []
+headers:
+  - name: User-Agent
+    value: insomnia/2023.5.8
+authentication: {}
+metaSortKey: -1697689143447
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

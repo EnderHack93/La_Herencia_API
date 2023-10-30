@@ -1,0 +1,23 @@
+_id: req_a19e39e845b24a7fb3f3f4b3772ae5c5
+type: Request
+parentId: fld_e44e84caa2c94512b518a74de9da6300
+modified: 1696942113056
+created: 1696942076368
+url: localhost:8000/personas
+name: GET Personas
+description: ""
+method: GET
+body: {}
+parameters: []
+headers:
+  - name: User-Agent
+    value: insomnia/2023.5.8
+authentication: {}
+metaSortKey: -1696942076368
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

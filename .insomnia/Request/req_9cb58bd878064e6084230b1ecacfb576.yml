@@ -1,0 +1,31 @@
+_id: req_9cb58bd878064e6084230b1ecacfb576
+type: Request
+parentId: fld_a1b31ee34578492db3335c2c8b40698e
+modified: 1698337635167
+created: 1697546218375
+url: localhost:8000/pedidos
+name: GET Pedidos c/s Filtros
+description: ""
+method: GET
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"columna":"hora",
+    	"tipo":"desc"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+  - name: User-Agent
+    value: insomnia/2023.5.8
+authentication: {}
+metaSortKey: -1697546218375
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

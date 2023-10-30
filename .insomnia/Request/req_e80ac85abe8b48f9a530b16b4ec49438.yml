@@ -1,0 +1,23 @@
+_id: req_e80ac85abe8b48f9a530b16b4ec49438
+type: Request
+parentId: fld_9da2284ff0bb470fb62e3afa7c2c2918
+modified: 1698335601138
+created: 1698335568944
+url: localhost:8000/cupones/3ef61d94-519b-4eb2-ae68-a3b27f9c2b22
+name: Activar/Desactivar Cupon
+description: ""
+method: PUT
+body: {}
+parameters: []
+headers:
+  - name: User-Agent
+    value: insomnia/2023.5.8
+authentication: {}
+metaSortKey: -1698335568944
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

@@ -1,0 +1,30 @@
+_id: req_e2e156f9d5184e63aca7481ca6ffcb21
+type: Request
+parentId: fld_659e0907fa87409e92a543283f63ea06
+modified: 1698344635435
+created: 1694298512828
+url: localhost:8000/categorias
+name: Create Categoria
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"nombre":"Bebidas Alcoholicas"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+  - name: User-Agent
+    value: insomnia/2023.5.8
+authentication: {}
+metaSortKey: -1694322610257
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

@@ -1,0 +1,25 @@
+_id: req_566e68e450e54042bbd53ec498900f1e
+type: Request
+parentId: fld_659e0907fa87409e92a543283f63ea06
+modified: 1696955290704
+created: 1694321854475
+url: localhost:8000/categorias
+name: GET Ver categorias
+description: ""
+method: GET
+body: {}
+parameters: []
+headers:
+  - name: User-Agent
+    value: insomnia/2023.5.8
+authentication:
+  type: bearer
+  token: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJwZXJzb25hIjp7ImlkX3BlcnNvbmEiOiJNUjkzMTQwODkiLCJub21icmVzIjoiTWF1cm8gQXJpZWwiLCJhcGVsbGlkb3MiOiJSYWRhIEVzY29iYXIiLCJjaSI6IjkxNTM0NDMiLCJjb3JyZW8iOiJvbGEyQGdtYWlsLmNvbSJ9LCJpYXQiOjE2OTY5NTUyODAsImV4cCI6MTY5Njk1NTMwMH0.dbTUPHpNCA8jTJOxm0feC1pssLj7ADbQgBz4zGTQFcs
+metaSortKey: -1694322610157
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

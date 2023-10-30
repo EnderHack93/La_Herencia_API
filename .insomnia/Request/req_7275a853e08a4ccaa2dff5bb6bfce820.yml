@@ -1,0 +1,23 @@
+_id: req_7275a853e08a4ccaa2dff5bb6bfce820
+type: Request
+parentId: fld_e44e84caa2c94512b518a74de9da6300
+modified: 1698293308605
+created: 1696947196879
+url: localhost:8000/personas/MR9393328
+name: DELETE Persona
+description: ""
+method: DELETE
+body: {}
+parameters: []
+headers:
+  - name: User-Agent
+    value: insomnia/2023.5.8
+authentication: {}
+metaSortKey: -1696947196879
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

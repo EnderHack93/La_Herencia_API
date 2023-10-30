@@ -1,0 +1,23 @@
+_id: req_ea417b5b64774c6689ecf1ef51fa5388
+type: Request
+parentId: fld_9da2284ff0bb470fb62e3afa7c2c2918
+modified: 1698333239602
+created: 1698333222647
+url: localhost:8000/cupones
+name: GET cupones
+description: ""
+method: GET
+body: {}
+parameters: []
+headers:
+  - name: User-Agent
+    value: insomnia/2023.5.8
+authentication: {}
+metaSortKey: -1698333222647
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

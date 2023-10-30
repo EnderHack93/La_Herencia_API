@@ -1,0 +1,30 @@
+_id: req_d30135ac370f4647973f5b1b06eeecea
+type: Request
+parentId: fld_659e0907fa87409e92a543283f63ea06
+modified: 1694322613731
+created: 1694322246302
+url: localhost:8000/categorias/1
+name: UPDATE Categoria
+description: ""
+method: PUT
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"nombre":"Carne Argentina"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+  - name: User-Agent
+    value: insomnia/2023.5.8
+authentication: {}
+metaSortKey: -1694322609957
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

@@ -1,0 +1,23 @@
+_id: req_27fd00ad63c34021bcd17861c93da464
+type: Request
+parentId: fld_0df0d6a75d1c42aab8e050d564524665
+modified: 1695047026112
+created: 1694114739777
+url: localhost:8000/productos/YUCA74134
+name: GET Producto
+description: ""
+method: GET
+body: {}
+parameters: []
+headers:
+  - name: User-Agent
+    value: insomnia/2023.5.8
+authentication: {}
+metaSortKey: -1694322635868
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global

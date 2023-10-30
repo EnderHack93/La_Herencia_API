@@ -1,0 +1,31 @@
+_id: req_b2fb0009ef084f0780b57ccc9981a43e
+type: Request
+parentId: fld_248cdcc984ce427780af85a3c87d92a2
+modified: 1698242682884
+created: 1698108474863
+url: localhost:8000/session/loginmovil
+name: LOGIN MOVIL
+description: ""
+method: POST
+body:
+  mimeType: application/json
+  text: |-
+    {
+    	"email":"maurorada93@gmail.com",
+    	"password":"Soyelmauro2"
+    }
+parameters: []
+headers:
+  - name: Content-Type
+    value: application/json
+  - name: User-Agent
+    value: insomnia/2023.5.8
+authentication: {}
+metaSortKey: -1698108474863
+isPrivate: false
+settingStoreCookies: true
+settingSendCookies: true
+settingDisableRenderRequestBody: false
+settingEncodeUrl: true
+settingRebuildPath: true
+settingFollowRedirects: global
