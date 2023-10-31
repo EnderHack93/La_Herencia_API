@@ -3,7 +3,7 @@ import { sequelize } from "./src/config/sequelize.js";
 
 try {
   try {
-    await sequelize.sync({force:true}); 
+    await sequelize.sync({force:false}); 
     console.log("Conexion exitosa a la base de datos");
   } catch (error) {
     console.log(error.message);
