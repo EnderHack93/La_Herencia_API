@@ -23,7 +23,8 @@ const createProductos = async (req, res) => {
     nombre == null ||
     precio == null ||
     descripcion == null ||
-    id_categoria == null
+    id_categoria == null,
+    imagen == null
   ) {
     res.status(400).json({ error: "ingrese los datos requeridos" });
   } else {

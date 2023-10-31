@@ -28,6 +28,11 @@ const persona = await sequelize.define("personas", {
   telefono: {
     type: DataTypes.STRING,
   },
+  imagen:{
+    type:DataTypes.STRING,
+    
+    defaultValue:"https://storage.googleapis.com/la-herencia-users-img/perfil.png"
+  },
   correo: {
     type: DataTypes.STRING,
     allowNull: false,

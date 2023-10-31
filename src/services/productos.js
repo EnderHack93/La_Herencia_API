@@ -11,15 +11,16 @@ export const servVerProductos = async () => {
 export const servGetProductosCat = async (idCategoria) => {
   const response = await producto.findAll({
     where: {
-      id_categoria: idCategoria
+      id_categoria: idCategoria,
     },
   });
   return response;
-}
+};
 
 export const servCreateProductos = async (productoReq, imagen) => {
   const id_producto = await genId(productoReq.nombre);
-  const upImage = await uploadFile(imagen);
+  const tabla = "productos";
+  const upImage = await uploadFile(imagen, tabla);
   const newProducto = await producto
     .create({
       id_producto: id_producto,
@@ -36,7 +37,7 @@ export const servCreateProductos = async (productoReq, imagen) => {
   return newProducto;
 };
 
-export const servUpdateProducto = async (id, productoObj,imagen) => {
+export const servUpdateProducto = async (id, productoObj, imagen) => {
   const prod = await producto.findByPk(id);
   if (!prod) {
     return { message: "Producto no encontrado" };
@@ -48,15 +49,19 @@ export const servUpdateProducto = async (id, productoObj,imagen) => {
     imagenAnteriorUrl.lastIndexOf("/") + 1
   );
   if (imagen) {
-    const nuevaImgUrl = await replaceImage(imagen, nombreImagenAnterior);
+    const nuevaImgUrl = await replaceImage(
+      imagen,
+      nombreImagenAnterior,
+      "productos"
+    );
     prod.nombre = productoObj.nombre;
     prod.descripcion = productoObj.descripcion;
     prod.precio = productoObj.precio;
-    prod.imagen = nuevaImgUrl
+    prod.imagen = nuevaImgUrl;
     prod.id_categoria = productoObj.id_categoria;
     await prod.save();
     return prod;
-  }else{
+  } else {
     prod.nombre = productoObj.nombre;
     prod.descripcion = productoObj.descripcion;
     prod.precio = productoObj.precio;
@@ -85,7 +90,7 @@ export const servObtenerProdPorCat = async (id) => {
     },
   });
   return response;
-}
+};
 
 const genId = async (nombreProd) => {
   var id_producto = nombreProd.slice(0, 4);
