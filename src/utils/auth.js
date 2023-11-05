@@ -33,7 +33,7 @@ export const servAuthUserMovil = async (correo, password) => {
   const match = await bcrypt.compare(password, user.password);
   if (!match) return { mensaje: "contraseña incorrecta" };
 
-  return true;
+  return {status:true,id_persona:user.id_persona};
 };
 
 export const servSendResPassMail = async (correo, url) => {
