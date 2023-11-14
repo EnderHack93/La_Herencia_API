@@ -11,6 +11,8 @@ const host = process.env.PGHOST;
 const port = process.env.PGPORT;
 
 const sequelize = new Sequelize(url,{
-  timezone: 'America/La_Paz',
+  dialect: 'postgres',
 });
+sequelize.config.timezone = 'America/La_Paz';
+console.log(sequelize.config.timezone);
 export { sequelize };
