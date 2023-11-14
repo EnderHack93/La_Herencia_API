@@ -5,6 +5,7 @@ import {
   servFilterPedidos,
   servGetAllPedidos,
   servGetPedidoId,
+  servGetPedidosByUser,
   servRefactorMontoTotal,
   servUpdateStatePedido,
 } from "../services/pedidos.js";
@@ -26,6 +27,11 @@ export const getPedidoId = async (req, res) => {
   const data = await servGetPedidoId(id);
   res.json(data);
 };
+export const getPedidosByUserId = async (req,res) =>{
+  const id = req.params.id;
+  const data = await servGetPedidosByUser(id);
+  res.json(data);
+}
 
 export const updateEstadoPedido = async (req, res) => {
   const id = req.params.id;

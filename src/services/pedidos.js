@@ -17,6 +17,14 @@ export const servGetPedidoId = async (id) => {
   const data = await pedido.findByPk(id);
   return data;
 };
+export const servGetPedidosByUser = async(id) =>{
+  const data = await pedido.findAll({
+    where: {
+      id_cliente: id
+    }
+  })
+  return data;
+}
 export const servFilterPedidos = async (columna, tipo) => {
   const data = await pedido.findAll({
     order: [[columna, tipo]],
