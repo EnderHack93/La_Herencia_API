@@ -10,5 +10,7 @@ const password = process.env.PGPASSWORD;
 const host = process.env.PGHOST;
 const port = process.env.PGPORT;
 
-const sequelize = new Sequelize(url);
+const sequelize = new Sequelize(url,{
+  timezone: 'America/La_Paz',
+});
 export { sequelize };

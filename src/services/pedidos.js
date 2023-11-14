@@ -57,7 +57,7 @@ export const servCreatePedido = async (id_cliente) => {
   const data = await pedido.create({
     id_pedido: crypto.randomUUID(),
     fecha: moment().format("YYYY-MM-DD"),
-    hora: new moment().format("HH:mm:ss"),
+    hora: moment().format("HH:mm:ss"),
     montoTotal: 0,
     id_cliente,
   });

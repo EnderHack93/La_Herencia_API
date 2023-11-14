@@ -10,7 +10,7 @@ import cupones from "./src/routes/cupones.routes.js"
 import cors from "cors";
 import bodyParser from "body-parser";
 import multer from "multer";
-
+import moment from "moment/moment.js";
 
 dotenv.config();
 
@@ -20,6 +20,7 @@ const app = express();
 
 app.use(bodyParser.json());
 app.use(express.json());
+moment.tz.setDefault('America/La_Paz');
 
 app.use(upload.any());
 app.use(bodyParser.urlencoded({ extended: true }));
