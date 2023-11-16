@@ -31,3 +31,8 @@ export const servCreateDetallePedidos = async (
     id_producto: prodReq.id_producto,
   });
 };
+
+export const servGetMasVendido = async ()=>{
+  const response = await detallePedido.max('id_producto')
+  return response
+}

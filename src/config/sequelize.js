@@ -14,5 +14,5 @@ const sequelize = new Sequelize(url,{
   dialect: 'postgres',
 });
 sequelize.config.timezone = 'America/La_Paz';
-console.log(sequelize.config.timezone);
+
 export { sequelize };

@@ -1,6 +1,7 @@
 import { DataTypes } from "sequelize";
 import { sequelize } from "../config/sequelize.js";
 import { pedido } from "./pedido.js";
+import { puntuacion } from "./puntuacion.js";
 
 const persona = await sequelize.define("personas", {
   id_persona: {
@@ -49,5 +50,11 @@ pedido.belongsTo(persona, {
   },
   allowNull: false,
 });
+puntuacion.belongsTo(persona, {
+  foreignKey:{
+    name: "id_cliente",
+  },
+  allowNull:false,
+})
 
 export { persona };

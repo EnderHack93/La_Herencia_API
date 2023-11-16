@@ -2,6 +2,7 @@ import { DataTypes } from "sequelize";
 
 import { sequelize } from "../config/sequelize.js";
 import { categoria } from "./categoria.js";
+import { puntuacion } from "./puntuacion.js";
 
 const producto = await sequelize.define("productos", {
   id_producto: {
@@ -34,5 +35,11 @@ producto.belongsTo(categoria, {
     name: "id_categoria",
   },
 });
+puntuacion.belongsTo(puntuacion, {
+  foreignKey:{
+    name:"id_producto"
+  },
+  allowNull:false,
+})
 
 export { producto };
