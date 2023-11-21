@@ -10,7 +10,9 @@ import { servGetProducto } from "./productos.js";
 import { servGetCuponCodigo } from "./cupones.js";
 
 export const servGetAllPedidos = async () => {
-  const data = await pedido.findAll();
+  const data = await pedido.findAll({
+    order:[["fecha","desc"],["hora","asc"]]
+  });
   return data;
 };
 export const servGetPedidoId = async (id) => {
