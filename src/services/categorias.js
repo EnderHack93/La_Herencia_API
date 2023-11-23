@@ -5,6 +5,8 @@ export const servVerCategorias = async ()=>{
     const response = await categoria.findAll({
         where: {
             estado: true
+        },order:{
+            id_categoria: 'ASC'
         }
     });
     return response;
