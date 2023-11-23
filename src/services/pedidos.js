@@ -11,7 +11,7 @@ import { servGetCuponCodigo } from "./cupones.js";
 
 export const servGetAllPedidos = async () => {
   const data = await pedido.findAll({
-    order:[["fecha","desc"],["hora","asc"]]
+    order:[["fecha","desc"],["hora","desc"]]
   });
   return data;
 };
