@@ -8,7 +8,7 @@ async function uploadFile(file,tabla) {
     }else if( tabla == "personas"){
       bucket = storage.bucket('la-herencia-users-img');
     }
-    const fileName = `${now}_${file.originalname}`;
+    const fileName = `${now}_${file.originalname.trim()}`;
     const fileUpload = bucket.file(fileName);
     const stream = fileUpload.createWriteStream({
         resumable: false,
@@ -21,7 +21,7 @@ async function uploadFile(file,tabla) {
     return new Promise((resolve, reject) => {
         stream.on('error', reject);
         stream.on('finish', () => {
-            const publicUrl = `https://storage.googleapis.com/${bucket.name}/${fileUpload.name.trim()}`;
+            const publicUrl = `https://storage.googleapis.com/${bucket.name}/${fileUpload.name}`;
             resolve(publicUrl);
         });
         stream.end(file.buffer);
