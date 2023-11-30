@@ -21,8 +21,7 @@ async function uploadFile(file,tabla) {
     return new Promise((resolve, reject) => {
         stream.on('error', reject);
         stream.on('finish', () => {
-            const sanitizedFilename = fileUpload.name.replace(/\s/g, '');
-            const publicUrl = `https://storage.googleapis.com/${bucket.name}/${sanitizedFilename}`;
+            const publicUrl = `https://storage.googleapis.com/${bucket.name}/${fileUpload.name.trim()}`;
             resolve(publicUrl);
         });
         stream.end(file.buffer);
