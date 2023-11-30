@@ -9,7 +9,7 @@ async function uploadFile(file,tabla) {
       bucket = storage.bucket('la-herencia-users-img');
     }
     const fileName = `${now}_${file.originalname.trim()}`;
-    const fileUpload = bucket.file(fileName);
+    const fileUpload = bucket.file(fileName.trim());
     const stream = fileUpload.createWriteStream({
         resumable: false,
         public: true,
@@ -37,7 +37,6 @@ async function uploadFile(file,tabla) {
     // Verificamos si el nombre de la imagen anterior existe en el Cloud Storage
     const blob = await bucket.file(nombreImagenAnterior).get();
     // Si el nombre de la imagen anterior existe en el Cloud Storage, la borramos
-    console.log(nombreImagenAnterior);
     if (blob && nombreImagenAnterior != "perfil.png") {
       await bucket.file(nombreImagenAnterior).delete();
     }
