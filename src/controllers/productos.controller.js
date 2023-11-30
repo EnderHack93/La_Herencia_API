@@ -18,8 +18,7 @@ const getProductosCategoria = async (req, res) => {
 };
 const createProductos = async (req, res) => {
   const { nombre, precio, descripcion, id_categoria } = req.body;
-
-  const  imagen = req.files[0];
+  const imagen = req.files[0];
   if (
     nombre == null ||
     precio == null ||
