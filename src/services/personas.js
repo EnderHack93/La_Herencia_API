@@ -4,9 +4,7 @@ import { replaceImage, uploadFile } from "../utils/cloudStorage.js";
 
 export const servVerPersonas = async () => {
   const response = await persona.findAll({
-    where: {
-      estado: true,
-    },
+    order:[["estado","desc"],["createdAt",'desc']]
   });
 
   return response;
@@ -106,8 +104,8 @@ export const servDeactivatePersona = async (id) => {
 
 const genId = async (nombres, apellidos, ci) => {
   var id_persona =
-    nombres[0] +
-    apellidos[0] +
+    nombres[0].toUpperCase() +
+    apellidos[0].toUpperCase() +
     ci[0] +
     ci[ci.length - 1] +
     Math.floor(10000 + Math.random() * 90000);

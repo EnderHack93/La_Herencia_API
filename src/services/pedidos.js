@@ -7,7 +7,7 @@ import {
 } from "./detallePedidos.js";
 import crypto from "crypto";
 import { servGetProducto } from "./productos.js";
-import { servGetCuponCodigo } from "./cupones.js";
+import { servChangeStateCupon, servGetCuponCodigo } from "./cupones.js";
 
 export const servGetAllPedidos = async () => {
   const data = await pedido.findAll({
@@ -49,6 +49,9 @@ export const servApplyCupon = async (id_pedido, codigo) => {
       pedidoRes.save();
 
       cupon.usosDisponibles = cupon.usosDisponibles - 1;
+      if(cupon.usosDisponibles == 0){
+        cupon.estado = false;
+      }
       cupon.save();
 
       return pedidoRes;
@@ -79,6 +82,9 @@ export const servUpdateStatePedido = async (id_pedido, estado) => {
     return { mensaje: estado + " no es un estado de pedido valido." };
   }
 };
+export const servUpdateEditarPrecioPedido = async() =>{
+
+}
 
 export const servAddDetallesPedido = async (data, productos) => {
   for (const producto of productos) {

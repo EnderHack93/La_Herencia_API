@@ -2,9 +2,9 @@ import { producto } from "../models/producto.js";
 import { replaceImage, uploadFile } from "../utils/cloudStorage.js";
 export const servVerProductos = async () => {
   const response = await producto.findAll({
-    where: {
-      estado: true,
-    },
+    order:[
+      ['estado',"desc"]
+    ]
   });
   return response;
 };
@@ -82,6 +82,14 @@ export const servDesactivarProducto = async (id) => {
   await prod.save();
   return prod;
 };
+
+export const servDesactivarProductoCat = async (id,estado) => {
+  const prod = await producto.findByPk(id);
+  prod.estado = estado;
+  await prod.save();
+  console.log(prod);
+  return prod;
+}
 
 export const servObtenerProdPorCat = async (id) => {
   const response = await producto.findAll({
