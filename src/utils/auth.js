@@ -21,7 +21,7 @@ export const servAuthUser = async (correo, password) => {
     correo: user.correo,
   });
 
-  return { token };
+  return { mensaje:token };
 };
 
 export const servAuthUserMovil = async (correo, password) => {
