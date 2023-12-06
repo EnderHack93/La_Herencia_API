@@ -11,8 +11,8 @@ export const servGenLinkResetPass = async (correo) => {
   const token = await genTokenResetPass(user.id_persona, user.correo);
 
   const url =
-    process.env.HOST +
-    "session/reset-password/" +
+    process.env.WEB +
+    "reset-password/" +
     user.id_persona +
     "/" +
     token;

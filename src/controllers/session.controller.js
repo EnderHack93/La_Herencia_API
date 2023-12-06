@@ -26,6 +26,7 @@ export const genResetPassLink = async (req, res) => {
   }
 };
 
+
 export const verifyResetPass = async (req, res) => {
   const token = req.params.token;
 

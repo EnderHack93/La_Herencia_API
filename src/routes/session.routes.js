@@ -12,7 +12,7 @@ const router = Router();
 
 router.post("/login", login);
 router.post("/loginMovil", loginMovil);
-router.get("/forgotPass", genResetPassLink);
+router.post("/forgotPass", genResetPassLink);
 router.get("/reset-password/:id/:token", verifyResetPass);
 router.post("/reset-password/:id/:token", resetPassword);
 
