@@ -4,9 +4,7 @@ import { config } from "dotenv";
 config();
 
 export const genToken = async (persona) => {
-  var generedToken = Jwt.sign({ persona }, process.env.SECRETSTRING, {
-    expiresIn: "20s",
-  });
+  var generedToken = Jwt.sign({ persona }, process.env.SECRETSTRING);
   return generedToken;
 };
 export const genTokenResetPass =async (id,email) => {
@@ -14,6 +12,10 @@ export const genTokenResetPass =async (id,email) => {
     expiresIn: "5m",
   });
   return genToken;
+}
+export const getInfoToken = async(token)=>{
+  const info = Jwt.verify(token, process.env.SECRETSTRING);
+    return info;
 }
 export function checkToken(token) {
   try {

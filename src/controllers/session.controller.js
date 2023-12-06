@@ -7,7 +7,7 @@ import {
   servAuthUserMovil,
   servSendResPassMail,
 } from "../utils/auth.js";
-import { checkToken } from "../utils/jwt.js";
+import { checkToken, getInfoToken } from "../utils/jwt.js";
 
 export const login = async (req, res) => {
   const { email, password } = req.body;
@@ -25,6 +25,11 @@ export const genResetPassLink = async (req, res) => {
     res.json(sendEmail);
   }
 };
+export const obtenerInfoPerfil = async (req, res) => {
+  const { token } = req.params;
+  const response = await getInfoToken(token);
+  res.json(response);
+}
 
 
 export const verifyResetPass = async (req, res) => {
