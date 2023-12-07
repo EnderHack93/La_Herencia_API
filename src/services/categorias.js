@@ -8,9 +8,6 @@ import {
 
 export const servVerCategorias = async () => {
   const categorias = await categoria.findAll({
-    where:{
-      estado : true
-    },
     order: [
       ["estado", "desc"],
       ["id_categoria", "asc"],
