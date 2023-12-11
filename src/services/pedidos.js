@@ -11,7 +11,10 @@ import { servChangeStateCupon, servGetCuponCodigo } from "./cupones.js";
 
 export const servGetAllPedidos = async () => {
   const data = await pedido.findAll({
-    order:[["fecha","desc"],["hora","desc"]]
+    order: [
+      ["fecha", "desc"],
+      ["hora", "desc"],
+    ],
   });
   return data;
 };
@@ -19,14 +22,14 @@ export const servGetPedidoId = async (id) => {
   const data = await pedido.findByPk(id);
   return data;
 };
-export const servGetPedidosByUser = async(id) =>{
+export const servGetPedidosByUser = async (id) => {
   const data = await pedido.findAll({
     where: {
-      id_cliente: id
-    }
-  })
+      id_cliente: id,
+    },
+  });
   return data;
-}
+};
 export const servFilterPedidos = async (columna, tipo) => {
   const data = await pedido.findAll({
     order: [[columna, tipo]],
@@ -41,28 +44,41 @@ export const servApplyCupon = async (id_pedido, codigo) => {
   if (cupon == null) {
     return { mensaje: "cupon no encontrado" };
   } else {
-    if (cupon.usosDisponibles == 0) {
-      return { mensaje: "cupon no disponible" };
+    if (pedidoRes.cupon == null) {
+      if (cupon.usosDisponibles == 0) {
+        return { mensaje: "cupon no disponible" };
+      } else {
+        pedidoRes.cupon = codigo;
+        pedidoRes.montoTotal =
+          pedidoRes.montoTotal -
+          pedidoRes.montoTotal * (cupon.porcentajeDescuento / 100);
+
+        pedidoRes.save();
+
+        cupon.usosDisponibles = cupon.usosDisponibles - 1;
+        if (cupon.usosDisponibles == 0) {
+          cupon.estado = false;
+        }
+        cupon.save();
+
+        return pedidoRes;
+      }
     } else {
-      pedidoRes.montoTotal = pedidoRes.montoTotal - (pedidoRes.montoTotal * (cupon.porcentajeDescuento / 100));
+      pedidoRes.montoTotal =
+        pedidoRes.montoTotal -
+        pedidoRes.montoTotal * (cupon.porcentajeDescuento / 100);
 
       pedidoRes.save();
-
-      cupon.usosDisponibles = cupon.usosDisponibles - 1;
-      if(cupon.usosDisponibles == 0){
-        cupon.estado = false;
-      }
-      cupon.save();
-
       return pedidoRes;
     }
   }
 };
-export const servCreatePedido = async (id_cliente) => {
+export const servCreatePedido = async (id_cliente, tipo) => {
   const data = await pedido.create({
     id_pedido: crypto.randomUUID(),
     fecha: moment().format("YYYY-MM-DD"),
     hora: moment().format("HH:mm:ss"),
+    tipo,
     montoTotal: 0,
     id_cliente,
   });
@@ -82,9 +98,7 @@ export const servUpdateStatePedido = async (id_pedido, estado) => {
     return { mensaje: estado + " no es un estado de pedido valido." };
   }
 };
-export const servUpdateEditarPrecioPedido = async() =>{
-
-}
+export const servUpdateEditarPrecioPedido = async () => {};
 
 export const servAddDetallesPedido = async (data, productos) => {
   for (const producto of productos) {
@@ -105,5 +119,6 @@ export const servRefactorMontoTotal = async (pedido) => {
   const newPedido = await servGetPedidoId(pedido);
   newPedido.montoTotal = montoT;
   newPedido.save();
-  return newPedido;
+  const newPedido2 =  await servApplyCupon(newPedido.id_pedido, newPedido.cupon);
+  return newPedido2;
 };

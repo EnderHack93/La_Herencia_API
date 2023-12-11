@@ -19,6 +19,15 @@ const pedido = await sequelize.define("pedidos", {
     type: DataTypes.DOUBLE,
     allowNull: false,
   },
+  tipo:{
+    type: DataTypes.STRING,
+    allowNull: false,
+    defaultValue:"Local"
+  },
+  cupon:{
+    type: DataTypes.STRING,
+    allowNull:true,
+  },
   estado: {
     type: ENUM,
     values: ["pendiente", "confirmado", "entregado", "cancelado"],

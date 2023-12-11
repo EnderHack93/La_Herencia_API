@@ -45,12 +45,12 @@ export const updateEstadoPedido = async (req, res) => {
 }
 
 export const createPedido = async (req, res) => {
-  const { id_cliente } = req.body;
+  const { id_cliente , tipo } = req.body;
   const { productos } = req.body;
   const {cupon} = req.body;
   if (id_cliente != null) {
     if (productos != null) {
-      const data = await servCreatePedido(id_cliente);
+      const data = await servCreatePedido(id_cliente,tipo);
 
       await servAddDetallesPedido(data, productos);
 

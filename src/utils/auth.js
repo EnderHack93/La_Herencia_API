@@ -19,6 +19,7 @@ export const servAuthUser = async (correo, password) => {
     apellidos: user.apellidos,
     ci: user.ci,
     correo: user.correo,
+    imagen: user.imagen
   });
 
   return { mensaje:token };

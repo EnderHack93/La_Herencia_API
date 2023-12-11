@@ -2,6 +2,7 @@ import {
   servCreateCategoria,
   servDesactivarCategoria,
   servGetCategoria,
+  servGetCategoriaAPI,
   servUpdateCategoria,
   servVerCategorias,
 } from "../services/categorias.js";
@@ -24,6 +25,10 @@ const getCategoria = async (req, res) => {
   const response = await servGetCategoria(id);
   res.json(response);
 };
+const getCategoriaAPI = async(req,res)=>{
+  const response = await servGetCategoriaAPI();
+  res.json(response);
+}
 const updateCategoria = async (req, res) => {
   const id = req.params.id;
   const response = await servUpdateCategoria(id, req.body);
@@ -41,4 +46,5 @@ export {
   getCategoria,
   updateCategoria,
   desactivarCategoria,
+  getCategoriaAPI
 };

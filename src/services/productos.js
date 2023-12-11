@@ -12,6 +12,7 @@ export const servGetProductosCat = async (idCategoria) => {
   const response = await producto.findAll({
     where: {
       id_categoria: idCategoria,
+      estado:true
     },
   });
   return response;

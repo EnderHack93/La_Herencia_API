@@ -13,18 +13,21 @@ export const servVerCategorias = async () => {
       ["id_categoria", "asc"],
     ],
   });
-
-//   for (const categoria of categorias) {
-//     const productosPorCategoria = await producto.count({
-//       where: { id_categoria: categoria.id_categoria },
-//     });
-
-//     categoria.productosAsignados = productosPorCategoria;
-    
-//   }
-
   return categorias;
 };
+
+export const servGetCategoriaAPI = async()=>{
+  const categorias = await categoria.findAll({
+    where:{
+      estado:true    
+    },
+    order: [
+      ["estado", "desc"],
+      ["id_categoria", "asc"],
+    ],
+  });
+  return categorias
+}
 
 export const servCreateCategoria = async (categoriaReq) => {
   const newCategoria = await categoria

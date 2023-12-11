@@ -8,11 +8,22 @@ import {
   servSendResPassMail,
 } from "../utils/auth.js";
 import { checkToken, getInfoToken } from "../utils/jwt.js";
+import { servSendContacto } from "../utils/mail.js";
 
 export const login = async (req, res) => {
   const { email, password } = req.body;
   const response = await servAuthUser(email, password);
   res.json(response);
+};
+
+export const sendContacto = async (req, res) => {
+  const { email, asunto, mensaje, nombre } = req.body;
+  if (email != null && asunto != null && mensaje != null && nombre != null) {
+    const sendEmail = await servSendContacto(req.body);
+    res.json(sendEmail);
+  } else {
+    res.status(400).json({ error: "ingrese los datos requeridos" });
+  }
 };
 
 export const genResetPassLink = async (req, res) => {
@@ -29,8 +40,7 @@ export const obtenerInfoPerfil = async (req, res) => {
   const { token } = req.params;
   const response = await getInfoToken(token);
   res.json(response);
-}
-
+};
 
 export const verifyResetPass = async (req, res) => {
   const token = req.params.token;

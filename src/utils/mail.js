@@ -352,3 +352,29 @@ export const servSendUrlResetPass = async (email, url) => {
     return { mensaje: "error" };
   }
 };
+
+export const servSendContacto = async (reqMail) => {
+  const mail = {
+    from: process.env.GMAILACCOUNT,
+    to: process.env.GMAILACCOUNT,
+    subject: reqMail.asunto,
+    html: `
+        <html>
+        <body>
+          <p>
+           NOMBRE:${reqMail.nombre}</br>
+           CORREO:${reqMail.email}</br>
+           ASUNTO:${reqMail.asunto}</br>
+           MENSAJE:${reqMail.mensaje}</br>
+          </p>
+        </body>
+        </html>
+        `,
+  };
+  const response = await Email.sendMail(mail);
+  if (response.accepted[0] == process.env.GMAILACCOUNT) {
+    return { mensaje: "success" };
+  } else {
+    return { mensaje: "error" };
+  }
+}
