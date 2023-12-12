@@ -3,6 +3,7 @@ import {
   servCreateCupon,
   servEditarCupon,
   servGetAllCupons,
+  servGetCuponCodigo,
   servGetCuponPk,
 } from "../services/cupones.js";
 
@@ -34,6 +35,12 @@ export const getCupon = async (req, res) => {
   const response = await servGetCuponPk(id);
   res.json(response);
 };
+
+export const getCuponCodigo = async (req, res) => {
+  const id = req.params.id;
+  const response = await servGetCuponCodigo(id);
+  res.json(response);
+}
 
 export const changeStateCupon = async (req, res) => {
   const id = req.params.id;
