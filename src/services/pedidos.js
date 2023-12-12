@@ -119,6 +119,6 @@ export const servRefactorMontoTotal = async (pedido) => {
   const newPedido = await servGetPedidoId(pedido);
   newPedido.montoTotal = montoT;
   newPedido.save();
-  const newPedido2 =  await servApplyCupon(newPedido.id_pedido, newPedido.cupon);
-  return newPedido2;
+
+  return  newPedido;
 };
